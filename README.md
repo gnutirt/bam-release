@@ -1,5 +1,17 @@
 # Bear Agent Manager
 
+<p align="center"><b>Run a team of Claude Code agents on Windows: shared rooms, task board, multi-account, Copilot, Telegram/Zalo, VS Code.</b><br>
+<i>Điều phối cả nhóm agent Claude Code trên Windows: phòng chat chung, bảng việc, nhiều tài khoản, Copilot, Telegram/Zalo, VS Code.</i></p>
+
+<p align="center">
+<a href="https://github.com/gnutirt/bam-release/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/gnutirt/bam-release?include_prereleases&label=release"></a>
+<a href="https://github.com/gnutirt/bam-release/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/gnutirt/bam-release/total"></a>
+<a href="https://github.com/gnutirt/bam-release/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/gnutirt/bam-release?style=social"></a>
+<img alt="Windows 10/11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6">
+</p>
+
+<p align="center"><a href="https://github.com/gnutirt/bam-release/releases/latest"><b>⬇ Download / Tải về</b></a> · ⭐ <b>Star this repo if it helps you / Thấy hữu ích thì cho 1 sao nhé</b></p>
+
 **English** · [Tiếng Việt](#tiếng-việt)
 
 **A local control room for AI coding agents.** Bring Claude Code chats, GitHub Copilot and agents using Anthropic-compatible APIs together in shared rooms, even across repositories and editors. Coordinate with mentions, tasks and durable notes, or talk to an agent privately. Watch and guide work from a browser, VS Code or Antigravity.
