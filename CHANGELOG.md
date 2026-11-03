@@ -1,5 +1,35 @@
 # Changelog
 
+## 1.0.6-1 - 2026-11-03
+
+Tự cập nhật từ bản này chỉ TẢI bản mới (kiểm chữ ký + sha256), rồi hiện nút Cập nhật; chỉ khi user bấm mới đổi bản hoặc chạy Setup (#1143).
+
+### Thay đổi
+
+- Feat: tab Log riêng trên sidebar, dọn log cũ theo cap 500 MB (#1130).
+- Feat: ô "Giữ log (ngày)" 3–90 trên tab Log (#1141).
+- Feat: tệp đính kèm dạng chữ (.txt .log .md .json .csv) có nút "Xem" (#1137).
+- Fix: revive thử lại khi claude báo "Session ID … is already in use" trước khi báo lỗi (#1133).
+
+## 1.0.6 - 2026-11-03
+
+Từ bản này app tự cập nhật. **Máy đang chạy 1.0.4 hoặc 1.0.5-x: tải Setup 1.0.6 và chạy tay 1 lần**; từ 1.0.6 trở đi app tự tải bản mới, kiểm chữ ký rồi đổi bản khi rảnh.
+
+### Thay đổi
+
+- Feat: tự cập nhật app: tìm bản mới ở gnutirt/bam-release, tải zip, chờ app rảnh 2 lần liên tiếp rồi đổi bản; báo vào phòng và topic Hệ thống trên Telegram; tắt được ở Cài đặt (autoUpdateApp) (#1039, #1047, #1050).
+- Feat: bản tải về phải có `checksums.txt.sig` khớp khoá Ed25519 nhúng trong app, kiểm trước khi tin sha256; thiếu hoặc sai chữ ký thì không cài (#1052).
+- Feat: khi app cần bản host mới, tải Setup đúng phiên bản và chạy im lặng lúc rảnh, có kiểm chữ ký (#1053); bản cũ chỉ được xác nhận sau khi hub sống 60 s và /api/health ok, lỗi thì quay về bản trước (#1049).
+- Feat: extension VS Code tự cập nhật từ VSIX của đúng bản đang chạy (#1051); plugin đóng gói giữ một đường dẫn ổn định qua các lần cập nhật (#1048).
+- Feat: wizard cài lần đầu 6 bước: Claude CLI + tài khoản, nhập chat cũ từ VS Code/Antigravity, editor, addon, Telegram/Zalo; bước nào cũng bỏ qua được (#1067, #1068).
+- Feat: Zalo dùng như app chat: danh sách và hội thoại đang mở tự hiện tin mới (#1069).
+- Feat: chuyển tài khoản cho từng chat được chọn (#1065); chat hết hạn mức quá 30 phút thì tin chờ được chuyển cho thành viên rảnh cùng vai (#1062).
+- Feat: cảnh báo ổ hệ thống còn dưới 20 GB (#1059); Dọn dẹp gom worktree và thư mục test cũ của agent (#1057); thư mục tạm của agent nằm trong gốc rác riêng (#1035).
+- Change: cài mới thì mọi preset nhà cung cấp (Intern AI, DeepSeek, OpenRouter) tắt và key trống; máy cũ giữ nguyên (#1072).
+- Fix: hub không treo lúc khởi động khi chuyển dữ liệu tài khoản (chạy ở tiến trình con, giới hạn 120 s; đếm chat trước/sau) (#1055).
+- Fix: restart hub không làm kẹt giao diện (#1064); không báo "mở tab bằng tay" sai (#1061); Zalo không vướng listener cũ (#1063); gỡ code tài khoản chính cũ (#1066).
+- Docs: README và wiki song ngữ VI + EN có ảnh giao diện mới (#1041, #1042, #1045); quy trình ký và phát hành ở docs/release-signing.md (#1054).
+
 ## 1.0.5-2 - 2026-11-02
 
 Bản công khai đầu tiên trên bam-release. Tài khoản Claude ngang hàng, trợ lý bam-boss không chết khi hết hạn mức, bam-browser cho mọi agent, và nhiều sửa lỗi sau audit 1.0.4–1.0.5.
